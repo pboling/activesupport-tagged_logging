@@ -7,6 +7,22 @@ the [code of conduct][🤝conduct].
 To submit a patch, please fork the project and create a patch with tests.
 Once you're happy with it send a pull request.
 
+## The Reek List
+
+To refresh the `reek` list:
+
+```bash
+bundle exec reek > REEK
+```
+
+## Appraisal
+
+### Generate a new set of Appraisal gemfiles:
+
+```bash
+BUNDLE_GEMFILE=Appraisal.root.gemfile appraisal update
+```
+
 ## Release
 
 ### One-time, Per-developer, Setup
