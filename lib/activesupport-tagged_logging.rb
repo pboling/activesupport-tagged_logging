@@ -21,14 +21,16 @@ if ActiveSupport.version < "8"
   # !!ORDER MATTERS!!
   #
   # Extracted from:
-  # https://github.com/rails/rails/blob/6b7b019e07fcea00ab448ff772402a9ff7614f9e/activesupport/lib/active_support/isolated_execution_state.rb
-  # Compare SHA with latest commit to check for changes:
+  # https://github.com/rails/rails/blob/a5b341d881f272ea95edb1e69939663983f0b78e/activesupport/lib/active_support/isolated_execution_state.rb
+  # which at the time was the latest version of the file on `main` branch.
+  # Compare SHA with latest commit to the same file on `main` to check for changes:
   # https://github.com/rails/rails/blob/main/activesupport/lib/active_support/isolated_execution_state.rb
   require_relative "activesupport/isolated_execution_state"
 
   # Extracted from:
   # https://github.com/rails/rails/blob/592a52b9370df79787d74b1bac9b201891c45054/activesupport/lib/active_support/tagged_logging.rb
-  # Compare SHA with latest commit to check for changes:
+  # which at the time was the latest version of the file on `main` branch.
+  # Compare SHA with latest commit to the same file on `main` to check for changes:
   # https://github.com/rails/rails/blob/main/activesupport/lib/active_support/tagged_logging.rb
   #
   # All this reloading might print warnings about redefined methods, and this is expected.
