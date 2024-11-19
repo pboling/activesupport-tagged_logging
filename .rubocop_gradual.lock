@@ -1,12 +1,12 @@
 {
   "bin/bundle:247448467": [
-    [64, 5, 20, "ThreadSafety/InstanceVariableInClassMethod: Avoid instance variables in class methods.", 2485198147]
+    [64, 5, 20, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 2485198147]
   ],
   "lib/activesupport/isolated_execution_state.rb:4123223916": [
-    [14, 28, 16, "ThreadSafety/InstanceVariableInClassMethod: Avoid instance variables in class methods.", 430180392],
-    [20, 18, 16, "ThreadSafety/InstanceVariableInClassMethod: Avoid instance variables in class methods.", 430180392],
-    [22, 9, 6, "ThreadSafety/InstanceVariableInClassMethod: Avoid instance variables in class methods.", 2771743759],
-    [28, 9, 16, "ThreadSafety/InstanceVariableInClassMethod: Avoid instance variables in class methods.", 430180392]
+    [14, 28, 16, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 430180392],
+    [20, 18, 16, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 430180392],
+    [22, 9, 6, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 2771743759],
+    [28, 9, 16, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 430180392]
   ],
   "lib/activesupport/tagged_logging.rb:1806330148": [
     [107, 7, 71, "Style/ClassMethodsDefinitions: Use `class << self` to define a class method.", 4229885320],
