@@ -67,6 +67,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("rspec-block_is_expected", "~> 1.0", ">= 1.0.6")
 
   # Linting
+  spec.add_development_dependency("reek", "~> 6.3", ">= 6.3.0")
   spec.add_development_dependency("rubocop-lts", "~> 18.2", ">= 18.2.1") # Lint & Style Support for Ruby 2.7+
   spec.add_development_dependency("rubocop-packaging", "~> 0.5", ">= 0.5.2")
   spec.add_development_dependency("rubocop-rspec", "~> 3.0")
