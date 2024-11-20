@@ -64,18 +64,18 @@ require "activesupport-tagged_logging"
 
 ### With `activesupport-logger` gem
 
-[`activesupport-logger`][activesupport-logger] is automatically depended on and configured by this gem,
+[activesupport-logger][activesupport-logger] is automatically depended on and configured by this gem,
 so you don't need to do anything else.
 
 IMPORTANT: When using this gem,
-**do not require [`activesupport-logger`][activesupport-logger] in your code.**
+**do not `require "activesupport-logger"` in your code.**
 Load order matters.
 
 Simplified, the load order is basically:
 
 - Standard `active_support/logger` from the Rails version loaded by your application
 - Standard `active_support/tagged_logging` from the Rails version loaded by your application
-- This gem's dependency [`activesupport-logger`][activesupport-logger] which was ripped from the Rails v8 beta
+- This gem's dependency [activesupport-logger][activesupport-logger] which was ripped from the Rails v8 beta
 - This gem's `activesupport-tagged_logging` which was ripped from the Rails v8 beta
 
 But, again, this is handled for you.
