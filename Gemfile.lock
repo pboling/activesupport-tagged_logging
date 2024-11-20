@@ -6,6 +6,7 @@ PATH
       activesupport-logger (~> 1.0, >= 1.0.1)
       logger (~> 1.6, >= 1.6.1)
       mutex_m (~> 0.1)
+      rdoc (~> 6.8, >= 6.8.1)
       stringio (>= 0.0.2)
       version_gem (~> 1.1, >= 1.1.4)
 
@@ -97,9 +98,13 @@ GEM
       ast (~> 2.4.1)
       racc
     power_assert (2.0.4)
+    psych (5.2.0)
+      stringio
     racc (1.8.1)
     rainbow (3.1.1)
     rake (13.2.1)
+    rdoc (6.8.1)
+      psych (>= 4.0.0)
     reek (6.3.0)
       dry-schema (~> 1.13.0)
       parser (~> 3.3.0)
