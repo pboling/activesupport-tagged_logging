@@ -1,4 +1,4 @@
-name: Heads Compat Matrix
+name: Legacy Compat (EOL, Ruby 3.0) Matrix
 
 env:
   K_SOUP_COV_DO: false
@@ -30,36 +30,30 @@ jobs:
     if: "!contains(github.event.commits[0].message, '[ci skip]') && !contains(github.event.commits[0].message, '[skip ci]')"
     env: # $BUNDLE_GEMFILE must be set at job level, so it is set for all steps
       BUNDLE_GEMFILE: ${{ github.workspace }}/${{ matrix.gemfile }}.gemfile
-    runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
+    runs-on: ubuntu-22.04
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         include:
-          # ruby-head
-          - ruby: "head"
-            appraisal: "as-8-0"
+          - ruby: "3.0"
+            appraisal: "as-6-1"
             taskname: "spec"
             gemfile: "Appraisal.root"
-            rubygems: latest
-            bundler: latest
-
-          # truffleruby-head
-          - ruby: "truffleruby-head"
-            appraisal: "as-8-0"
+            rubygems: '3.5.23'
+            bundler: '2.5.23'
+          - ruby: "3.0"
+            appraisal: "as-7-0"
             taskname: "spec"
             gemfile: "Appraisal.root"
-            rubygems: latest
-            bundler: latest
-
-          # jruby-head
-          - ruby: "jruby-head"
-            appraisal: "as-8-0"
+            rubygems: '3.5.23'
+            bundler: '2.5.23'
+          - ruby: "3.0"
+            appraisal: "as-7-1"
             taskname: "spec"
             gemfile: "Appraisal.root"
-            rubygems: latest
-            bundler: latest
-
+            rubygems: '3.5.23'
+            bundler: '2.5.23'
     steps:
       - name: Checkout
         uses: actions/checkout@v4

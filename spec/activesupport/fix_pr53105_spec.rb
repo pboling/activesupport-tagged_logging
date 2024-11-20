@@ -5,7 +5,7 @@ RSpec.describe Activesupport::FixPr53105 do
     subject(:init) { described_class.init }
 
     it "does not raise" do
-      block_is_expected.to_not raise_error
+      block_is_expected.not_to raise_error
     end
 
     it "is void" do

@@ -31,21 +31,21 @@ RSpec.describe ActiveSupport::TaggedLogging::Broadcasting do
     assert_equal "Cool story", return_value
   end
 
-  it "it returns a tagged logger without a block" do
+  it "returns a tagged logger without a block" do
     logger = @logger.tagged("BCX")
     logger.info "Funky time"
     assert_equal "[BCX] Funky time\n", @output1.string
     assert_equal "[BCX] Funky time\n", @output2.string
   end
 
-  it "it doesn't tag the original logger without a block" do
+  it "doesn't tag the original logger without a block" do
     @logger.tagged("BCX")
     @logger.info "Funky time"
     assert_equal "Funky time\n", @output1.string
     assert_equal "Funky time\n", @output2.string
   end
 
-  it "it ignores non-tagged loggers with a block" do
+  it "ignores non-tagged loggers with a block" do
     plain_output = StringIO.new
     plain_logger = ActiveSupport::Logger.new(plain_output)
     @logger.broadcast_to(plain_logger)
@@ -58,7 +58,7 @@ RSpec.describe ActiveSupport::TaggedLogging::Broadcasting do
     STR
   end
 
-  it "it ignores non-tagged loggers without a block" do
+  it "ignores non-tagged loggers without a block" do
     plain_output = StringIO.new
     plain_logger = ActiveSupport::Logger.new(plain_output)
     @logger.broadcast_to(plain_logger)

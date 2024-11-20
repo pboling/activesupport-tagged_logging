@@ -21,7 +21,7 @@ require "active_support/tagged_logging"
 begin
   require "active_support/broadcast_logger"
 rescue LoadError
-  warn "[Activesupport::TaggedLogging] ActiveSupport::BroadcastLogger is not available. Version of Rails may be too old."
+  warn("[Activesupport::TaggedLogging] ActiveSupport::BroadcastLogger is not available. Version of Rails may be too old.")
 end
 
 # !!ORDER MATTERS!!

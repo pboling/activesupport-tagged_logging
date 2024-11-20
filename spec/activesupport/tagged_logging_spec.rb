@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe ActiveSupport::TaggedLogging do
-  class MyLogger < ::ActiveSupport::Logger
+  class MyLogger < ActiveSupport::Logger
     def flush(*)
       info "[FLUSHED]"
     end

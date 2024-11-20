@@ -47,6 +47,11 @@ Gem::Specification.new do |spec|
   spec.bindir = "exe"
   spec.require_paths = ["lib"]
 
+  # Extractions from Stdlib (Runtime)
+  spec.add_dependency("logger", "~> 1.6", ">= 1.6.1")
+  spec.add_dependency("mutex_m", "~> 0.1")
+  spec.add_dependency("stringio", ">= 0.0.2")
+
   # Runtime Dependencies
   spec.add_dependency("activesupport", ">= 5.2")
   spec.add_dependency("activesupport-logger", "~> 1.0", ">= 1.0.1")
@@ -69,9 +74,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("test-unit", "~> 3.6", ">= 3.6.2")
 
   # Linting
-  spec.add_development_dependency("reek", "~> 6.3", ">= 6.3.0")
   spec.add_development_dependency("rubocop-lts", "~> 18.2", ">= 18.2.1") # Lint & Style Support for Ruby 2.7+
   spec.add_development_dependency("rubocop-packaging", "~> 0.5", ">= 0.5.2")
   spec.add_development_dependency("rubocop-rspec", "~> 3.0")
-  spec.add_development_dependency("standard", "~> 1.42", ">= 1.42.1")
 end
