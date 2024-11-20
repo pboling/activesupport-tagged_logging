@@ -67,7 +67,6 @@ Gem::Specification.new do |spec|
 
   # Unit tests
   spec.add_development_dependency("appraisal", "~> 2.5")
-  spec.add_development_dependency("method_source", ">= 1.1.0")
   spec.add_development_dependency("minitest", "~> 5.25", ">= 5.25.1")
   spec.add_development_dependency("rake", ">= 13")
   spec.add_development_dependency("rspec", "~> 3.13")
