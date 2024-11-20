@@ -16,7 +16,7 @@ begin
   Reek::Rake::Task.new do |t|
     t.fail_on_error = true
     t.verbose = false
-    t.source_files = "{spec,spec_ignored,spec_orms,lib}/**/*.rb"
+    t.source_files = "{spec,lib}/**/*.rb"
   end
 rescue LoadError
   task(:reek) do
