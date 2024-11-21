@@ -95,7 +95,7 @@ Load order matters.
 
 ### With `activesupport-broadcast_logger` gem
 
-[activesupport-broadcast_logger][activesupport-broadcast_logger] 
+[activesupport-broadcast_logger][activesupport-broadcast_logger]
 is automatically depended on and configured by this gem,
 so you don't need to do anything else.
 

@@ -10,6 +10,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [2.0.0] - 2024-11-21
+- COVERAGE:  98.11% -- 104/106 lines in 5 files
+- BRANCH COVERAGE:  81.82% -- 18/22 branches in 5 files
+- 36.36% documented
+### Changed
+- `ActiveSupport::FixPr53105` => `Activesupport::FixPr53105`
+  - **BREAKING CHANGE**: change `ActiveSupport::FixPr53105.init` to `Activesupport::FixPr53105.init`
+  - This is to keep the code of this gem in a consistent namespace separate from the standard Rails `ActiveSupport`.
+- Upgrade to `activesupport-logger` v2.0.0
+### Fixed
+- Compatibility with Rails v5.2, v6.0, v6.1, v7.0, v7.1, and v8
+### Added
+- Dependency on `activesupport-broadcast_logger` v2.0.0
+- Real test suite
+
 ## [1.0.0] - 2024-10-10
 - COVERAGE:  46.84% -- 74/158 lines in 6 files
 - BRANCH COVERAGE:  21.74% -- 5/23 branches in 6 files
