@@ -1,14 +1,54 @@
 # Activesupport::TaggedLogging
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/gem/v/activesupport-tagged_logging.svg)](https://rubygems.org/gems/activesupport-tagged_logging)
-[![Downloads Today](https://img.shields.io/gem/rd/activesupport-tagged_logging.svg)](https://github.com/pboling/activesupport-tagged_logging)
-[![CI Supported Build][🚎s-wfi]][🚎s-wf]
-[![CI Unsupported Build][🚎us-wfi]][🚎us-wf]
-[![CI Legacy Build][🚎lg-wfi]][🚎lg-wf]
-[![CI Style Build][🚎st-wfi]][🚎st-wf]
-[![CI Coverage Build][🚎cov-wfi]][🚎cov-wf]
-[![CI Heads Build][🚎hd-wfi]][🚎hd-wf]
+[![Version][👽versioni]][👽version]
+[![License: MIT][📄license-img]][📄license-ref]
+[![Downloads Rank][👽dl-ranki]][👽dl-rank]
+[![Open Source Helpers][👽oss-helpi]][👽oss-help]
+[![Depfu][🔑depfui♻️]][🔑depfu]
+[![CodeCov][🔑codecovi♻️]][🔑codecov]
+[![Test Coverage][🔑cc-covi♻️]][🔑cc-cov]
+[![Maintainability][🔑cc-mnti♻️]][🔑cc-mnt]
+[![CI Supported Build][🚎6-s-wfi]][🚎6-s-wf]
+[![CI Legacy Build][🚎4-lg-wfi]][🚎4-lg-wf]
+[![CI Unsupported Build][🚎7-us-wfi]][🚎7-us-wf]
+[![CI Heads Build][🚎3-hd-wfi]][🚎3-hd-wf]
+[![CI Coverage Build][🚎2-cov-wfi]][🚎2-cov-wf]
+[![CI Style Build][🚎5-st-wfi]][🚎5-st-wf]
+
+<!--- ( 👽️ INFO LINKS ) -->
+
+[👽dl-rank]: https://rubygems.org/gems/activesupport-tagged_logging
+[👽dl-ranki]: https://img.shields.io/gem/rd/activesupport-tagged_logging.svg
+[👽oss-help]: https://www.codetriage.com/pboling/activesupport-tagged_logging
+[👽oss-helpi]: https://www.codetriage.com/pboling/activesupport-tagged_logging/badges/users.svg
+[👽version]: https://rubygems.org/gems/activesupport-tagged_logging
+[👽versioni]: https://img.shields.io/gem/v/activesupport-tagged_logging.svg
+
+<!--- ( 🔑 KEYED LINKS ) -->
+
+[🔑cc-mnt]: https://codeclimate.com/github/pboling/activesupport-tagged_logging/maintainability
+[🔑cc-mnti♻️]: https://api.codeclimate.com/v1/badges/ce5a654a5f9fe07ecb0a/maintainability
+[🔑cc-cov]: https://codeclimate.com/github/pboling/activesupport-tagged_logging/test_coverage
+[🔑cc-covi♻️]: https://api.codeclimate.com/v1/badges/ce5a654a5f9fe07ecb0a/test_coverage
+[🔑codecov]: https://codecov.io/gh/pboling/activesupport-tagged_logging
+[🔑codecovi♻️]: https://codecov.io/gh/pboling/activesupport-tagged_logging/branch/main/graph/badge.svg?token=lhefE7Tkzq
+[🔑depfu]: https://depfu.com/github/pboling/activesupport-tagged_logging
+[🔑depfui♻️]: https://badges.depfu.com/badges/160bf8da842f6caadfc2da5a407842ac/count.svg
+
+<!--- ( 🚎 BUILD LINKS ) -->
+
+[🚎2-cov-wf]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/coverage.yml
+[🚎2-cov-wfi]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/coverage.yml/badge.svg
+[🚎3-hd-wf]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/heads.yml
+[🚎3-hd-wfi]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/heads.yml/badge.svg
+[🚎4-lg-wf]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/legacy.yml
+[🚎4-lg-wfi]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/legacy.yml/badge.svg
+[🚎5-st-wf]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/style.yml
+[🚎5-st-wfi]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/style.yml/badge.svg
+[🚎6-s-wf]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/supported.yml
+[🚎6-s-wfi]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/supported.yml/badge.svg
+[🚎7-us-wf]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/unsupported.yml
+[🚎7-us-wfi]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/unsupported.yml/badge.svg
 
 -----
 
@@ -17,19 +57,6 @@
 [![Polar Shield][🖇polar-img]][🖇polar]
 [![Donate to my FLOSS or refugee efforts at ko-fi.com][🖇kofi-img]][🖇kofi]
 [![Donate to my FLOSS or refugee efforts using Patreon][🖇patreon-img]][🖇patreon]
-
-[🚎s-wf]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/supported.yml
-[🚎s-wfi]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/supported.yml/badge.svg
-[🚎us-wf]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/unsupported.yml
-[🚎us-wfi]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/unsupported.yml/badge.svg
-[🚎lg-wf]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/legacy.yml
-[🚎lg-wfi]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/legacy.yml/badge.svg
-[🚎st-wf]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/style.yml
-[🚎st-wfi]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/style.yml/badge.svg
-[🚎cov-wf]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/coverage.yml
-[🚎cov-wfi]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/coverage.yml/badge.svg
-[🚎hd-wf]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/heads.yml
-[🚎hd-wfi]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/heads.yml/badge.svg
 
 [⛳liberapay-img]: https://img.shields.io/liberapay/patrons/pboling.svg?logo=liberapay
 [⛳liberapay]: https://liberapay.com/pboling/donate
@@ -116,12 +143,11 @@ See: https://github.com/rails/rails/pull/53105/files
 
 ## General Info
 
-| Primary Namespaces | `Activesupport` && `ActiveSupport::Logger` && `Activesupport::FixPr53105`                                                                                                                                                                                                                                                                                                                                                                             |
-|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| code triage        | [![Open Source Helpers](https://www.codetriage.com/pboling/activesupport-tagged_logging/badges/users.svg)](https://www.codetriage.com/pboling/activesupport-tagged_logging)                                                                                                                                                                                                                                                                           |
-| documentation      | [on Github.com][homepage],  [on RubyDoc.info][documentation]                                                                                                                                                                                                                                                                                                                                                                                          |
-| expert support     | [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/peterboling?utm_source=github&utm_medium=button&utm_term=peterboling&utm_campaign=github)                                                                                                                                                                                                                                                 |
-| `...` 💖           | [![Liberapay Patrons][⛳liberapay-img]][⛳liberapay] [![Sponsor Me][🖇sponsor-img]][🖇sponsor] [![Follow Me on LinkedIn][🖇linkedin-img]][🖇linkedin] [![Find Me on WellFound:][✌️wellfound-img]][✌️wellfound] [![Find Me on CrunchBase][💲crunchbase-img]][💲crunchbase] [![My LinkTree][🌳linktree-img]][🌳linktree] [![Follow Me on Ruby.Social][🐘ruby-mast-img]][🐘ruby-mast] [![Tweet @ Peter][🐦tweet-img]][🐦tweet] [💻][coderme] [🌏][aboutme] |
+| Primary Namespaces | `Activesupport::TaggedLogging` && `ActiveSupport::TaggedLogging` && `Activesupport::FixPr53105`                                                                                                                                                                                                                                                                                                       |
+|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| documentation      | [on Github.com][homepage], [Latest release on RubyDoc.info][documentation], [HEAD on RubyDoc.info][documentation-head]                                                                                                                                                                                                                                   |
+| expert support     | [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/peterboling?utm_source=github&utm_medium=button&utm_term=peterboling&utm_campaign=github)                                                                                                                                                    |
+| `...` 💖           | [![Follow Me on LinkedIn][🖇linkedin-img]][🖇linkedin] [![Find Me on WellFound:][✌️wellfound-img]][✌️wellfound] [![Find Me on CrunchBase][💲crunchbase-img]][💲crunchbase] [![My LinkTree][🌳linktree-img]][🌳linktree] [![Follow Me on Ruby.Social][🐘ruby-mast-img]][🐘ruby-mast] [![Tweet @ Peter][🐦tweet-img]][🐦tweet] [💻][coderme] [🌏][aboutme] |
 
 <!-- 7️⃣ spread 💖 -->
 [🐦tweet-img]: https://img.shields.io/twitter/follow/galtzo.svg?style=social&label=Follow%20%40galtzo
@@ -138,8 +164,6 @@ See: https://github.com/rails/rails/pull/53105/files
 [🐘ruby-mast-img]: https://img.shields.io/mastodon/follow/109447111526622197?domain=https%3A%2F%2Fruby.social&style=plastic&logo=mastodon&label=Ruby%20%40galtzo
 [🌳linktree]: https://linktr.ee/galtzo
 [🌳linktree-img]: https://img.shields.io/badge/galtzo-purple?style=plastic&logo=linktree
-[documentation]: https://rubydoc.info/github/pboling/activesupport-tagged_logging
-[homepage]: https://github.com/pboling/activesupport-tagged_logging
 
 <!-- Maintainer Contact Links -->
 [aboutme]: https://about.me/peter.boling
@@ -157,6 +181,12 @@ Also, see [CONTRIBUTING.md][🤝contributing].
 [🤝pulls]: https://github.com/pboling/activesupport-tagged_logging/pulls
 [🤝contributing]: CONTRIBUTING.md
 
+### Code Coverage
+
+[![Coverage Graph][🔑codecov-g]][🔑codecov]
+
+[🔑codecov-g]: https://codecov.io/gh/pboling/activesupport-tagged_logging/graphs/tree.svg?token=cc6UdZCpAL
+
 ## 🌈 Contributors
 
 [![Contributors][🖐contributors-img]][🖐contributors]
@@ -166,6 +196,16 @@ Made with [contributors-img][🖐contrib-rocks].
 [🖐contrib-rocks]: https://contrib.rocks
 [🖐contributors]: https://github.com/pboling/activesupport-tagged_logging/graphs/contributors
 [🖐contributors-img]: https://contrib.rocks/image?repo=pboling/activesupport-tagged_logging
+
+## Star History
+
+<a href="https://star-history.com/#pboling/activesupport-tagged_logging&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=pboling/activesupport-tagged_logging&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=pboling/activesupport-tagged_logging&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=pboling/activesupport-tagged_logging&type=Date" />
+ </picture>
+</a>
 
 ## 🪇 Code of Conduct
 
@@ -193,12 +233,12 @@ the [Pessimistic Version Constraint][📌pvc] with two digits of precision.
 For example:
 
 ```ruby
-spec.add_dependency("activesupport-tagged_logging", "~> 1.0")
+spec.add_dependency("activesupport-tagged_logging", "~> 2.0")
 ```
 
 See [CHANGELOG.md][📌changelog] for list of releases.
 
-[comment]: <> ( 📌 VERSIONING LINKS )
+<!--- ( 📌 VERSIONING LINKS ) -->
 
 [📌pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
 [📌semver]: http://semver.org/
@@ -212,7 +252,7 @@ the [MIT License][📄license] [![License: MIT][📄license-img]][📄license-re
 
 See [LICENSE.txt][📄license] for the official [Copyright Notice][📄copyright-notice-explainer].
 
-[comment]: <> ( 📄 LEGAL LINKS )
+<!--- ( 📄 LEGAL LINKS ) -->
 
 [📄copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
 [📄license]: LICENSE.txt
@@ -223,11 +263,14 @@ See [LICENSE.txt][📄license] for the official [Copyright Notice][📄copyright
 
 * Copyright (c) David Heinemeier Hansson
 * Parts original to this extraction are:
-    * Copyright (c) 2024 [Peter H. Boling][peterboling] of [Rails Bling][railsbling]
+  * Copyright (c) 2024 [Peter H. Boling][peterboling] of [Rails Bling][railsbling]
 
 [railsbling]: http://www.railsbling.com
 [peterboling]: http://www.peterboling.com
 [bundle-group-pattern]: https://gist.github.com/pboling/4564780
+[documentation]: http://rubydoc.info/gems/activesupport-tagged_logging
+[documentation-head]: https://rubydoc.info/github/pboling/activesupport-tagged_logging/main
+[homepage]: https://github.com/pboling/activesupport-tagged_logging
 
 ## 🤑 One more thing
 
