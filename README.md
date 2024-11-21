@@ -54,14 +54,12 @@ Simply add it to your Gemfile, and configure.  The other gems will just work.
 
 Simplified, the load order is basically:
 
-- Standard `active_support/logger` from the Rails version loaded by your application
-- Standard `active_support/broadcast_logger` from the Rails version loaded by your application (if any)
-- Standard `active_support/tagged_logging` from the Rails version loaded by your application (if any)
 - Enhanced [activesupport-logger][activesupport-logger] which was ripped from Rails v8.0
 - Enhanced [activesupport-broadcast_logger][activesupport-broadcast_logger] which was ripped from Rails v8.0, and [this PR][pr-53093]
-- Enhanced [activesupport-tagged_logging][activesupport-tagged_logging] which was ripped from Rails v8.0, and [this PR][pr-53105]
+- Enhanced [activesupport-tagged_logging][activesupport-tagged_logging] (this gem) which was ripped from Rails v8.0, and [this PR][pr-53105]
 
-But, again, this is handled for you.
+Above load order is handled for you in [activesupport-tagged_logging][activesupport-tagged_logging] (this gem),
+so depend on this gem, not the siblings. ;)
 
 [activesupport-logger]: https://github.com/pboling/activesupport-logger
 [activesupport-broadcast_logger]: https://github.com/pboling/activesupport-broadcast_logger
