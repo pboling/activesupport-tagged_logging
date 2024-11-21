@@ -5,7 +5,7 @@
 [![Downloads Today](https://img.shields.io/gem/rd/activesupport-tagged_logging.svg)](https://github.com/pboling/activesupport-tagged_logging)
 [![CI Supported Build][🚎s-wfi]][🚎s-wf]
 [![CI Unsupported Build][🚎us-wfi]][🚎us-wf]
-[![CI Ancient Build][🚎a-wfi]][🚎a-wf]
+[![CI Legacy Build][🚎lg-wfi]][🚎lg-wf]
 [![CI Style Build][🚎st-wfi]][🚎st-wf]
 [![CI Coverage Build][🚎cov-wfi]][🚎cov-wf]
 [![CI Heads Build][🚎hd-wfi]][🚎hd-wf]
@@ -22,8 +22,8 @@
 [🚎s-wfi]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/supported.yml/badge.svg
 [🚎us-wf]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/unsupported.yml
 [🚎us-wfi]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/unsupported.yml/badge.svg
-[🚎a-wf]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/ancient.yml
-[🚎a-wfi]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/ancient.yml/badge.svg
+[🚎lg-wf]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/legacy.yml
+[🚎lg-wfi]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/legacy.yml/badge.svg
 [🚎st-wf]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/style.yml
 [🚎st-wfi]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/style.yml/badge.svg
 [🚎cov-wf]: https://github.com/pboling/activesupport-tagged_logging/actions/workflows/coverage.yml
@@ -42,9 +42,30 @@
 [🖇patreon-img]: https://img.shields.io/badge/patreon-donate-yellow.svg
 [🖇patreon]: https://patreon.com/galtzo
 
-This is an **unofficial** extraction of Rails' v8 `ActiveSupport::TaggedLogging` backported to work with Rails v5.2+ and Ruby 2.7+.
+This is an **unofficial** extraction of Rails' v8 `ActiveSupport::TaggedLogging` which has been:
+* refactored ([here][pr-53105]) to work with [broadcast logging][activesupport-broadcast_logger], and
+* backported to work with Rails v5.2+ and Ruby 2.7+.
 
-If this gem is loaded by Rails v8+, it does nothing at all.  NOOP.
+If the suite of gems this is part of is loaded in any version of Rails >= 5.2,
+it will replace the logging tooling completely.
+
+This gem automatically depends on and configures the other gems in the suite.
+Simply add it to your Gemfile, and configure.  The other gems will just work.
+
+Simplified, the load order is basically:
+
+- Enhanced [activesupport-logger][activesupport-logger] which was ripped from Rails v8.0
+- Enhanced [activesupport-broadcast_logger][activesupport-broadcast_logger] which was ripped from Rails v8.0, and [this PR][pr-53093]
+- Enhanced [activesupport-tagged_logging][activesupport-tagged_logging] (this gem) which was ripped from Rails v8.0, and [this PR][pr-53105]
+
+Above load order is handled for you in [activesupport-tagged_logging][activesupport-tagged_logging] (this gem),
+so depend on this gem, not the siblings. ;)
+
+[activesupport-logger]: https://github.com/pboling/activesupport-logger
+[activesupport-broadcast_logger]: https://github.com/pboling/activesupport-broadcast_logger
+[activesupport-tagged_logging]: https://github.com/pboling/activesupport-tagged_logging
+[pr-53105]: https://github.com/rails/rails/pull/53105
+[pr-53093]: https://github.com/rails/rails/pull/53093
 
 ## Installation
 
@@ -64,43 +85,43 @@ require "activesupport-tagged_logging"
 
 ### With `activesupport-logger` gem
 
-[`activesupport-logger`][activesupport-logger] is automatically depended on and configured by this gem,
+[activesupport-logger][activesupport-logger]
+is automatically depended on and configured by this gem,
 so you don't need to do anything else.
 
 IMPORTANT: When using this gem,
-**do not require [`activesupport-logger`][activesupport-logger] in your code.**
+**do not `require "activesupport-logger"` in your code.**
 Load order matters.
 
-Simplified, the load order is basically:
+### With `activesupport-broadcast_logger` gem
 
-- Standard `active_support/logger` from the Rails version loaded by your application
-- Standard `active_support/tagged_logging` from the Rails version loaded by your application
-- This gem's dependency [`activesupport-logger`][activesupport-logger] which was ripped from the Rails v8 beta
-- This gem's `activesupport-tagged_logging` which was ripped from the Rails v8 beta
+[activesupport-broadcast_logger][activesupport-broadcast_logger]
+is automatically depended on and configured by this gem,
+so you don't need to do anything else.
 
-But, again, this is handled for you.
-
-[activesupport-logger]: https://github.com/pboling/activesupport-logger
-[activesupport-tagged_logging]: https://github.com/pboling/activesupport-tagged_logging
+IMPORTANT: When using this gem,
+**do not `require "activesupport-broadcast_logger"` in your code.**
+Load order matters.
 
 ### With broadcasting support
 
 If you want to try an experimental fix from a PR, run:
 
 ```ruby
-ActiveSupport::FixPr53105.init
+Activesupport::FixPr53105.init
 ```
+NOTE: The bits of logic that are unique to this gem are in the namespace `Activesupport` (sic).
 
 See: https://github.com/rails/rails/pull/53105/files
 
 ## General Info
 
-| Primary Namespace | `Activesupport::Logger` && `ActiveSupport::Logger`                                                                                                                                                                                                                                                                                                                                                                                                                                |
-|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| code triage       | [![Open Source Helpers](https://www.codetriage.com/pboling/activesupport-tagged_logging/badges/users.svg)](https://www.codetriage.com/pboling/activesupport-tagged_logging)                                                                                                                                                                                                                                                                                     |
-| documentation     | [on Github.com][homepage],  [on RubyDoc.info][documentation]                                                                                                                                                                                                                                                                                                                                                                                          |
-| expert support    | [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/peterboling?utm_source=github&utm_medium=button&utm_term=peterboling&utm_campaign=github)                                                                                                                                                                                                                                                 |
-| `...` 💖          | [![Liberapay Patrons][⛳liberapay-img]][⛳liberapay] [![Sponsor Me][🖇sponsor-img]][🖇sponsor] [![Follow Me on LinkedIn][🖇linkedin-img]][🖇linkedin] [![Find Me on WellFound:][✌️wellfound-img]][✌️wellfound] [![Find Me on CrunchBase][💲crunchbase-img]][💲crunchbase] [![My LinkTree][🌳linktree-img]][🌳linktree] [![Follow Me on Ruby.Social][🐘ruby-mast-img]][🐘ruby-mast] [![Tweet @ Peter][🐦tweet-img]][🐦tweet] [💻][coderme] [🌏][aboutme] |
+| Primary Namespaces | `Activesupport` && `ActiveSupport::Logger` && `Activesupport::FixPr53105`                                                                                                                                                                                                                                                                                                                                                                             |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| code triage        | [![Open Source Helpers](https://www.codetriage.com/pboling/activesupport-tagged_logging/badges/users.svg)](https://www.codetriage.com/pboling/activesupport-tagged_logging)                                                                                                                                                                                                                                                                           |
+| documentation      | [on Github.com][homepage],  [on RubyDoc.info][documentation]                                                                                                                                                                                                                                                                                                                                                                                          |
+| expert support     | [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/peterboling?utm_source=github&utm_medium=button&utm_term=peterboling&utm_campaign=github)                                                                                                                                                                                                                                                 |
+| `...` 💖           | [![Liberapay Patrons][⛳liberapay-img]][⛳liberapay] [![Sponsor Me][🖇sponsor-img]][🖇sponsor] [![Follow Me on LinkedIn][🖇linkedin-img]][🖇linkedin] [![Find Me on WellFound:][✌️wellfound-img]][✌️wellfound] [![Find Me on CrunchBase][💲crunchbase-img]][💲crunchbase] [![My LinkTree][🌳linktree-img]][🌳linktree] [![Follow Me on Ruby.Social][🐘ruby-mast-img]][🐘ruby-mast] [![Tweet @ Peter][🐦tweet-img]][🐦tweet] [💻][coderme] [🌏][aboutme] |
 
 <!-- 7️⃣ spread 💖 -->
 [🐦tweet-img]: https://img.shields.io/twitter/follow/galtzo.svg?style=social&label=Follow%20%40galtzo
@@ -207,8 +228,6 @@ See [LICENSE.txt][📄license] for the official [Copyright Notice][📄copyright
 [railsbling]: http://www.railsbling.com
 [peterboling]: http://www.peterboling.com
 [bundle-group-pattern]: https://gist.github.com/pboling/4564780
-[documentation]: http://rubydoc.info/gems/activesupport-tagged_logging
-[homepage]: https://github.com/pboling/activesupport-tagged_logging
 
 ## 🤑 One more thing
 

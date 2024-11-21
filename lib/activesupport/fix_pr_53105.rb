@@ -1,10 +1,13 @@
 # Support for tagged logging from broadcast logging.
-#   ActiveSupport::FixPr53105.init
+#   Activesupport::FixPr53105.init
 # See: https://github.com/rails/rails/pull/53105
-module ActiveSupport
+module Activesupport
   module FixPr53105
+    # @return void
     def init
       require_relative "tagged_logging/broadcasting"
+
+      nil
     end
     module_function :init
   end

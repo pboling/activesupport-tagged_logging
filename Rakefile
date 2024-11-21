@@ -12,6 +12,19 @@ rescue LoadError
 end
 
 begin
+  require "reek/rake/task"
+  Reek::Rake::Task.new do |t|
+    t.fail_on_error = true
+    t.verbose = false
+    t.source_files = "{spec,lib}/**/*.rb"
+  end
+rescue LoadError
+  task(:reek) do
+    warn("reek is disabled")
+  end
+end
+
+begin
   require "yard-junk/rake"
 
   YardJunk::Rake.define_task
@@ -33,6 +46,7 @@ end
 
 begin
   require "rubocop/lts"
+
   Rubocop::Lts.install_tasks
 rescue LoadError
   task(:rubocop_gradual) do
