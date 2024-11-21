@@ -10,6 +10,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [2.0.1] - 2024-11-21
+- COVERAGE:  98.11% -- 104/106 lines in 5 files
+- BRANCH COVERAGE:  81.82% -- 18/22 branches in 5 files
+- 36.36% documented
+### Fixed
+- Compatibility with ActiveSupport
+  - Many libraries do `require "active_support"`
+
 ## [2.0.0] - 2024-11-21
 - COVERAGE:  98.11% -- 104/106 lines in 5 files
 - BRANCH COVERAGE:  81.82% -- 18/22 branches in 5 files
