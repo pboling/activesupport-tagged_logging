@@ -1,11 +1,8 @@
+spec/activesupport/tagged_logging_spec.rb -- 1 warning:
+  [4]:IrresponsibleModule: MyLogger has no descriptive comment [https://github.com/troessner/reek/blob/v6.3.0/docs/Irresponsible-Module.md]
 lib/activesupport/fix_pr_53105.rb -- 2 warnings:
-  [5]:IrresponsibleModule: ActiveSupport::FixPr53105 has no descriptive comment [https://github.com/troessner/reek/blob/v6.3.0/docs/Irresponsible-Module.md]
-  [5]:UncommunicativeModuleName: ActiveSupport::FixPr53105 has the name 'FixPr53105' [https://github.com/troessner/reek/blob/v6.3.0/docs/Uncommunicative-Module-Name.md]
-lib/activesupport/isolated_execution_state.rb -- 4 warnings:
-  [7]:Attribute: ActiveSupport::IsolatedExecutionState#active_support_execution_state is a writable attribute [https://github.com/troessner/reek/blob/v6.3.0/docs/Attribute.md]
-  [8]:Attribute: ActiveSupport::IsolatedExecutionState#active_support_execution_state is a writable attribute [https://github.com/troessner/reek/blob/v6.3.0/docs/Attribute.md]
-  [4]:IrresponsibleModule: ActiveSupport::IsolatedExecutionState has no descriptive comment [https://github.com/troessner/reek/blob/v6.3.0/docs/Irresponsible-Module.md]
-  [13]:TooManyStatements: ActiveSupport::IsolatedExecutionState#isolation_level= has approx 6 statements [https://github.com/troessner/reek/blob/v6.3.0/docs/Too-Many-Statements.md]
+  [5]:IrresponsibleModule: Activesupport::FixPr53105 has no descriptive comment [https://github.com/troessner/reek/blob/v6.3.0/docs/Irresponsible-Module.md]
+  [5]:UncommunicativeModuleName: Activesupport::FixPr53105 has the name 'FixPr53105' [https://github.com/troessner/reek/blob/v6.3.0/docs/Uncommunicative-Module-Name.md]
 lib/activesupport/tagged_logging/broadcasting.rb -- 4 warnings:
   [8, 13, 22]:DuplicateMethodCall: ActiveSupport::TaggedLogging::Broadcasting#tagged calls 'logger.respond_to?(:tagged)' 3 times [https://github.com/troessner/reek/blob/v6.3.0/docs/Duplicate-Method-Call.md]
   [14, 22]:DuplicateMethodCall: ActiveSupport::TaggedLogging::Broadcasting#tagged calls 'logger.tagged(*tags)' 2 times [https://github.com/troessner/reek/blob/v6.3.0/docs/Duplicate-Method-Call.md]
@@ -20,4 +17,4 @@ lib/activesupport/tagged_logging.rb -- 8 warnings:
   [28]:LongParameterList: ActiveSupport::TaggedLogging::Formatter#call has 4 parameters [https://github.com/troessner/reek/blob/v6.3.0/docs/Long-Parameter-List.md]
   [117]:TooManyStatements: ActiveSupport::TaggedLogging#self.new has approx 6 statements [https://github.com/troessner/reek/blob/v6.3.0/docs/Too-Many-Statements.md]
   [137]:TooManyStatements: ActiveSupport::TaggedLogging#tagged has approx 6 statements [https://github.com/troessner/reek/blob/v6.3.0/docs/Too-Many-Statements.md]
-18 total warnings
+15 total warnings
