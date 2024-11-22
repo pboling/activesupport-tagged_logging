@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    activesupport-tagged_logging (2.0.2)
+    activesupport-tagged_logging (2.0.3)
       activesupport (>= 5.2)
       activesupport-broadcast_logger (~> 2.0, >= 2.0.3)
       activesupport-logger (~> 2.0, >= 2.0.3)
