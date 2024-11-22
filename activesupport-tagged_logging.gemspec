@@ -54,8 +54,8 @@ Gem::Specification.new do |spec|
 
   # Runtime Dependencies
   spec.add_dependency("activesupport", ">= 5.2")
-  spec.add_dependency("activesupport-broadcast_logger", "~> 2.0", ">= 2.0.2")
-  spec.add_dependency("activesupport-logger", "~> 2.0", ">= 2.0.2")
+  spec.add_dependency("activesupport-broadcast_logger", "~> 2.0", ">= 2.0.3")
+  spec.add_dependency("activesupport-logger", "~> 2.0", ">= 2.0.3")
   spec.add_dependency("version_gem", "~> 1.1", ">= 1.1.4")
 
   # Documentation
