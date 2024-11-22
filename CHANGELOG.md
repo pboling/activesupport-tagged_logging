@@ -10,6 +10,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [2.0.2] - 2024-11-22
+- COVERAGE:  98.11% -- 104/106 lines in 5 files
+- BRANCH COVERAGE:  81.82% -- 18/22 branches in 5 files
+- 36.36% documented
+### Changed
+- upgrade activesupport-logger v2.0.2
+- upgrade activesupport-broadcast_logger v2.0.2
+### Fixed
+- rdoc as development dependency (was runtime, which interfered with Rails' psych dependency)
+
 ## [2.0.1] - 2024-11-21
 - COVERAGE:  98.11% -- 104/106 lines in 5 files
 - BRANCH COVERAGE:  81.82% -- 18/22 branches in 5 files
