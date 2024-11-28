@@ -106,8 +106,59 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
+### When it doesn't work
+
+```
+NameError: uninitialized constant ActiveSupport::TaggedLogging
+```
+
+The issue is likely that canonical `active_support` has been loaded before this gem had a chance to load.
+
+This is a common issue, see the following for more context:
+
+* https://github.com/soutaro/steep/pull/484
+* https://github.com/santry/json_tagged_logger/pull/22
+* https://github.com/VitalConnectInc/rails/pull/1
+  * Rails itself loads `active_support`, incorrectly, internally!
+  * When I get time I want to document this and submit a PR to Rails core.
+* https://github.com/VitalConnectInc/webpacker/pull/3
+
+This gem has a solution for all of the above, but it only works if this gem is loaded first.
+
+Keep reading below.
+
+### With Rails
+
+In a Rails project change `config/boot.rb` to match:
+
 ```ruby
+ENV["BUNDLE_GEMFILE"] ||= File.expand_path("../Gemfile", __dir__)
+
+require "bundler/setup" # Set up gems listed in the Gemfile.
+
+# NOTE: needs to load before active_support, so the magic will work.
 require "activesupport-tagged_logging"
+
+require "bootsnap/setup" # Speed up boot time by caching expensive operations.
+```
+
+### With Sidekiq
+
+You won't be able to use `bundle exec sidekiq`, as that results in loading `active_support` too early.
+However, you should have a `bin/sidekiq` binstub, which can be fixed to load `activesupport-tagged_logging` early!
+
+Change the last few lines of bin/sidekiq to match:
+
+```ruby
+require "rubygems"
+require "bundler/setup"
+
+# NOTE: needs to load before active_support, so the magic will work.
+#       sidekiq, when loaded in Rails, loads active_job,
+#       which depends on active_support, hence this early load hack.
+require "activesupport-tagged_logging"
+
+load Gem.bin_path("sidekiq", "sidekiq")
 ```
 
 ### With `activesupport-logger` gem
